@@ -27,7 +27,7 @@
         const item = document.createElement('a');
         item.className = "dropdown-item";
         item.href = "javascript:void(0);";
-        item.setAttribute("onclick", `goTo(${GAMES[key]})`);
+        item.setAttribute("onclick", `goTo("${GAMES[key]}")`);
         item.innerHTML = key;
 
         dropMenu.appendChild(item);
