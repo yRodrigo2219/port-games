@@ -12,10 +12,10 @@
     nameDrop.classList = "nav-link dropdown-toggle";
     nameDrop.href = "javascript:void(0);";
     nameDrop.id = "navbarDropdown";
-    nameDrop.createAttribute("role", "button");
-    nameDrop.createAttribute("data-toggle", "dropdown");
-    nameDrop.createAttribute("aria-haspopup", "true");
-    nameDrop.createAttribute("aria-expanded", "false");
+    nameDrop.setAttribute("role", "button");
+    nameDrop.setAttribute("data-toggle", "dropdown");
+    nameDrop.setAttribute("aria-haspopup", "true");
+    nameDrop.setAttribute("aria-expanded", "false");
     nameDrop.innerHTML = "Games";
 
     const dropMenu = document.createElement('div');
@@ -27,7 +27,7 @@
         const item = document.createElement('a');
         item.className = "dropdown-item";
         item.href = "javascript:void(0);";
-        item.createAttribute("onclick", `goTo(${GAMES[key]})`);
+        item.setAttribute("onclick", `goTo(${GAMES[key]})`);
         item.innerHTML = key;
 
         dropMenu.appendChild(item);
