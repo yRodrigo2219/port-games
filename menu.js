@@ -1,8 +1,10 @@
 (function(){
     const menu = document.getElementById('dropMenu');
 
+    const prefix = "port-games/";
+
     const GAMES = {
-        "Tic-Tac-Toe": "port-games/tictactoe/index.js"
+        "Tic-Tac-Toe": "tictactoe/"
     }
 
     const drop = document.createElement('li');
@@ -27,7 +29,7 @@
         const item = document.createElement('a');
         item.className = "dropdown-item";
         item.href = "javascript:void(0);";
-        item.setAttribute("onclick", `goTo("${GAMES[key]}")`);
+        item.setAttribute("onclick", `goTo("${prefix+GAMES[key]}")`);
         item.innerHTML = key;
 
         dropMenu.appendChild(item);
